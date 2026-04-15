@@ -1,0 +1,76 @@
+\doxysection{Matrix.\+cpp File Reference}
+\hypertarget{Matrix_8cpp}{}\label{Matrix_8cpp}\index{Matrix.cpp@{Matrix.cpp}}
+
+
+Implementación de la clase \doxylink{classMatrix}{Matrix}.  
+
+
+{\ttfamily \+\#include "{}Matrix.\+hpp"{}}\newline
+{\ttfamily \+\#include $<$iostream$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std::\+ostream \& \doxymbox{\hyperlink{Matrix_8cpp_a857cf01d39987ee8070464ff881c5eb2}{operator$<$$<$}} (std::\+ostream \&output, \doxymbox{\hyperlink{classMatrix}{Matrix}} \&m)
+\begin{DoxyCompactList}\small\item\em Sobrecarga del operador \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} para imprimir la matriz. \end{DoxyCompactList}\item 
+std::\+istream \& \doxymbox{\hyperlink{Matrix_8cpp_a6c37ceb3773d78e8a6dae27caa8934c4}{operator$>$$>$}} (std::\+istream \&input, \doxymbox{\hyperlink{classMatrix}{Matrix}} \&m)
+\begin{DoxyCompactList}\small\item\em Sobrecarga del operador \texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>} para ingresar los valores de la matriz. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementación de la clase \doxylink{classMatrix}{Matrix}. 
+
+La clase \doxylink{classMatrix}{Matrix} permite la creación y manipulación de matrices dinámicas de números reales. Implementa operaciones básicas como suma, resta, multiplicación (escalar y matricial), transpuesta e inversa.
+
+\begin{DoxyAuthor}{Author}
+Arredondo Benites Axel Daniel 
+
+Luis Enrrique Galindo Miranda 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9 de febrero 
+\end{DoxyDate}
+
+
+\label{doc-func-members}
+\Hypertarget{Matrix_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{Matrix_8cpp_a857cf01d39987ee8070464ff881c5eb2}\index{Matrix.cpp@{Matrix.cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Matrix.cpp@{Matrix.cpp}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily \label{Matrix_8cpp_a857cf01d39987ee8070464ff881c5eb2} 
+std::\+ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std::\+ostream \&}]{output}{, }\item[{\doxymbox{\hyperlink{classMatrix}{Matrix}} \&}]{m}{}\end{DoxyParamCaption})}
+
+
+
+Sobrecarga del operador \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} para imprimir la matriz. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em output} & Flujo de salida \\
+\hline
+{\em m} & Matriz a imprimir \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Referencia al flujo de salida 
+\end{DoxyReturn}
+\Hypertarget{Matrix_8cpp_a6c37ceb3773d78e8a6dae27caa8934c4}\index{Matrix.cpp@{Matrix.cpp}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Matrix.cpp@{Matrix.cpp}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$()}{operator>>()}}
+{\footnotesize\ttfamily \label{Matrix_8cpp_a6c37ceb3773d78e8a6dae27caa8934c4} 
+std::\+istream \& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std::\+istream \&}]{input}{, }\item[{\doxymbox{\hyperlink{classMatrix}{Matrix}} \&}]{m}{}\end{DoxyParamCaption})}
+
+
+
+Sobrecarga del operador \texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>} para ingresar los valores de la matriz. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & Flujo de entrada \\
+\hline
+{\em m} & Matriz a llenar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Referencia al flujo de entrada 
+\end{DoxyReturn}

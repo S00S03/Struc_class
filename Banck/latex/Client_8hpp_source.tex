@@ -1,0 +1,28 @@
+\doxysection{Client.\+hpp}
+\hypertarget{Client_8hpp_source}{}\label{Client_8hpp_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CLIENT\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CLIENT\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }Client\ \{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00009\ \ \ \ \ std::string\ nombre;}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{int}\ attention\_time;}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ Client(std::string\ nombre\ =\ \textcolor{stringliteral}{"{}"{}},\ \textcolor{keywordtype}{int}\ time\ =\ 0)\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \ \ \ \ this-\/>nombre\ =\ nombre;}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ this-\/>attention\_time\ =\ time;}
+\DoxyCodeLine{00015\ \ \ \ \ \}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{friend}\ std::ostream\&\ operator<<(std::ostream\&\ os,\ \textcolor{keyword}{const}\ Client\&\ c)\ \{}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ os\ <<\ c.nombre\ <<\ \textcolor{stringliteral}{"{}("{}}\ <<\ c.attention\_time\ <<\ \textcolor{stringliteral}{"{})"{}};}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ os;}
+\DoxyCodeLine{00020\ \ \ \ \ \}}
+\DoxyCodeLine{00021\ \};}
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

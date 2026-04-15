@@ -1,0 +1,220 @@
+\doxysection{Stack\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\hypertarget{classStack}{}\label{classStack}\index{Stack$<$ T $>$@{Stack$<$ T $>$}}
+
+
+Clase plantilla que implementa una pila (\doxylink{classStack}{Stack}) dinámica.  
+
+
+
+
+{\ttfamily \+\#include $<$Stack.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classStack_aefee698059467258bbd79045aca62a63}{Stack}} ()
+\begin{DoxyCompactList}\small\item\em Constructor por defecto. Inicializa la pila con capacidad inicial de 10 elementos. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classStack_a84ed303fcc02f090d439722515c341e6}{Stack}} (const \doxymbox{\hyperlink{classStack}{Stack}} \&other)
+\begin{DoxyCompactList}\small\item\em Constructor de copia. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classStack_a9e7a00875aefbdac560ab189b7bc61d1}{\texorpdfstring{$\sim$}{\string~}\+Stack}} ()
+\begin{DoxyCompactList}\small\item\em Destructor. Libera la memoria dinámica utilizada por la pila. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classStack}{Stack}} \& \doxymbox{\hyperlink{classStack_ae97cf63b6401d8af940644fa735d9412}{operator=}} (const \doxymbox{\hyperlink{classStack}{Stack}} \&other)
+\begin{DoxyCompactList}\small\item\em Operador de asignación. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classStack_a09c112ed67ca867eb98e9322ac0ee358}{push}} (const T \&new\+\_\+element)
+\begin{DoxyCompactList}\small\item\em Inserta un nuevo elemento en la cima de la pila. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classStack_a2723aec5c7e2611b97fcffeb7709de33}{pop}} ()
+\begin{DoxyCompactList}\small\item\em Elimina el elemento superior de la pila. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{classStack_aeecf178c7865fa4957798a0f5d7e1686}{size}} () const
+\begin{DoxyCompactList}\small\item\em Obtiene el número de elementos almacenados. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{classStack_a275d43ff89b91a9c6c5636cc8539d285}{empty}} () const
+\begin{DoxyCompactList}\small\item\em Verifica si la pila está vacía. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classStack_a941cc1b9263a723f8266c75cd1d3e06c}{empty\+\_\+\+Stack}} ()
+\begin{DoxyCompactList}\small\item\em Vacía completamente la pila. \end{DoxyCompactList}\item 
+T \doxymbox{\hyperlink{classStack_a1931814ad68db1eaedabdb37fa0fe494}{top}} () const
+\begin{DoxyCompactList}\small\item\em Devuelve el elemento en la cima. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classStack_adf50f058313f2b2885a8ca8e2bcccf59}{print}} () const
+\begin{DoxyCompactList}\small\item\em Imprime el contenido de la pila. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Stack$<$ T $>$}
+Clase plantilla que implementa una pila (\doxylink{classStack}{Stack}) dinámica. 
+
+Implementa una estructura LIFO (Last In, First Out). La memoria se gestiona dinámicamente y se redimensiona automáticamente cuando se alcanza la capacidad máxima.
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & Tipo de dato almacenado en la pila. \\
+\hline
+\end{DoxyTemplParams}
+
+
+\label{doc-constructors}
+\Hypertarget{classStack_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classStack_aefee698059467258bbd79045aca62a63}\index{Stack$<$ T $>$@{Stack$<$ T $>$}!Stack@{Stack}}
+\index{Stack@{Stack}!Stack$<$ T $>$@{Stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Stack()}{Stack()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classStack_aefee698059467258bbd79045aca62a63} 
+template$<$typename T$>$ \\
+\doxymbox{\hyperlink{classStack}{Stack}}$<$ T $>$::\+\+Stack (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructor por defecto. Inicializa la pila con capacidad inicial de 10 elementos. 
+
+\Hypertarget{classStack_a84ed303fcc02f090d439722515c341e6}\index{Stack$<$ T $>$@{Stack$<$ T $>$}!Stack@{Stack}}
+\index{Stack@{Stack}!Stack$<$ T $>$@{Stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Stack()}{Stack()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classStack_a84ed303fcc02f090d439722515c341e6} 
+template$<$typename T$>$ \\
+\doxymbox{\hyperlink{classStack}{Stack}}$<$ T $>$::\+\+Stack (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{classStack}{Stack}}$<$ T $>$ \&}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Constructor de copia. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Objeto \doxylink{classStack}{Stack} a copiar. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classStack_a9e7a00875aefbdac560ab189b7bc61d1}\index{Stack$<$ T $>$@{Stack$<$ T $>$}!````~Stack@{\texorpdfstring{$\sim$}{\string~}Stack}}
+\index{````~Stack@{\texorpdfstring{$\sim$}{\string~}Stack}!Stack$<$ T $>$@{Stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Stack()}{\string~Stack()}}
+{\footnotesize\ttfamily \label{classStack_a9e7a00875aefbdac560ab189b7bc61d1} 
+template$<$typename T$>$ \\
+\doxymbox{\hyperlink{classStack}{Stack}}$<$ T $>$::\+\texorpdfstring{$\sim$}{\string~}\doxymbox{\hyperlink{classStack}{Stack}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Destructor. Libera la memoria dinámica utilizada por la pila. 
+
+
+
+\label{doc-func-members}
+\Hypertarget{classStack_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classStack_a275d43ff89b91a9c6c5636cc8539d285}\index{Stack$<$ T $>$@{Stack$<$ T $>$}!empty@{empty}}
+\index{empty@{empty}!Stack$<$ T $>$@{Stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily \label{classStack_a275d43ff89b91a9c6c5636cc8539d285} 
+template$<$typename T$>$ \\
+bool \doxymbox{\hyperlink{classStack}{Stack}}$<$ T $>$::\+empty (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Verifica si la pila está vacía. 
+
+\begin{DoxyReturn}{Returns}
+true si está vacía. 
+
+false si contiene elementos. 
+\end{DoxyReturn}
+\Hypertarget{classStack_a941cc1b9263a723f8266c75cd1d3e06c}\index{Stack$<$ T $>$@{Stack$<$ T $>$}!empty\_Stack@{empty\_Stack}}
+\index{empty\_Stack@{empty\_Stack}!Stack$<$ T $>$@{Stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{empty\_Stack()}{empty\_Stack()}}
+{\footnotesize\ttfamily \label{classStack_a941cc1b9263a723f8266c75cd1d3e06c} 
+template$<$typename T$>$ \\
+void \doxymbox{\hyperlink{classStack}{Stack}}$<$ T $>$::\+empty\+\_\+\+Stack (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Vacía completamente la pila. 
+
+\Hypertarget{classStack_ae97cf63b6401d8af940644fa735d9412}\index{Stack$<$ T $>$@{Stack$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!Stack$<$ T $>$@{Stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \label{classStack_ae97cf63b6401d8af940644fa735d9412} 
+template$<$typename T$>$ \\
+\doxymbox{\hyperlink{classStack}{Stack}}$<$ T $>$ \& \doxymbox{\hyperlink{classStack}{Stack}}$<$ T $>$::\+operator= (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{classStack}{Stack}}$<$ T $>$ \&}]{other}{}\end{DoxyParamCaption})}
+
+
+
+Operador de asignación. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & Objeto \doxylink{classStack}{Stack} a copiar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Referencia al objeto actual. 
+\end{DoxyReturn}
+\Hypertarget{classStack_a2723aec5c7e2611b97fcffeb7709de33}\index{Stack$<$ T $>$@{Stack$<$ T $>$}!pop@{pop}}
+\index{pop@{pop}!Stack$<$ T $>$@{Stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily \label{classStack_a2723aec5c7e2611b97fcffeb7709de33} 
+template$<$typename T$>$ \\
+void \doxymbox{\hyperlink{classStack}{Stack}}$<$ T $>$::\+pop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Elimina el elemento superior de la pila. 
+
+\Hypertarget{classStack_adf50f058313f2b2885a8ca8e2bcccf59}\index{Stack$<$ T $>$@{Stack$<$ T $>$}!print@{print}}
+\index{print@{print}!Stack$<$ T $>$@{Stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily \label{classStack_adf50f058313f2b2885a8ca8e2bcccf59} 
+template$<$typename T$>$ \\
+void \doxymbox{\hyperlink{classStack}{Stack}}$<$ T $>$::\+print (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Imprime el contenido de la pila. 
+
+\Hypertarget{classStack_a09c112ed67ca867eb98e9322ac0ee358}\index{Stack$<$ T $>$@{Stack$<$ T $>$}!push@{push}}
+\index{push@{push}!Stack$<$ T $>$@{Stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily \label{classStack_a09c112ed67ca867eb98e9322ac0ee358} 
+template$<$typename T$>$ \\
+void \doxymbox{\hyperlink{classStack}{Stack}}$<$ T $>$::\+push (\begin{DoxyParamCaption}\item[{const T \&}]{new\+\_\+element}{}\end{DoxyParamCaption})}
+
+
+
+Inserta un nuevo elemento en la cima de la pila. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+element} & Elemento a insertar. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classStack_aeecf178c7865fa4957798a0f5d7e1686}\index{Stack$<$ T $>$@{Stack$<$ T $>$}!size@{size}}
+\index{size@{size}!Stack$<$ T $>$@{Stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily \label{classStack_aeecf178c7865fa4957798a0f5d7e1686} 
+template$<$typename T$>$ \\
+int \doxymbox{\hyperlink{classStack}{Stack}}$<$ T $>$::\+size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtiene el número de elementos almacenados. 
+
+\begin{DoxyReturn}{Returns}
+Cantidad de elementos en la pila. 
+\end{DoxyReturn}
+\Hypertarget{classStack_a1931814ad68db1eaedabdb37fa0fe494}\index{Stack$<$ T $>$@{Stack$<$ T $>$}!top@{top}}
+\index{top@{top}!Stack$<$ T $>$@{Stack$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{top()}{top()}}
+{\footnotesize\ttfamily \label{classStack_a1931814ad68db1eaedabdb37fa0fe494} 
+template$<$typename T$>$ \\
+T \doxymbox{\hyperlink{classStack}{Stack}}$<$ T $>$::\+top (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Devuelve el elemento en la cima. 
+
+\begin{DoxyReturn}{Returns}
+Elemento superior. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std::\+out\+\_\+of\+\_\+range} & si la pila está vacía. \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{Stack_8hpp}{Stack.\+hpp}}\end{DoxyCompactItemize}

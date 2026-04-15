@@ -1,0 +1,86 @@
+\doxysection{main.\+cpp File Reference}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{main.cpp@{main.cpp}}
+
+
+Simulación de banco con cola circular y 3 cajas.  
+
+
+{\ttfamily \+\#include $<$iostream$>$}\newline
+{\ttfamily \+\#include $<$chrono$>$}\newline
+{\ttfamily \+\#include $<$thread$>$}\newline
+{\ttfamily \+\#include $<$ctime$>$}\newline
+{\ttfamily \+\#include $<$cstdlib$>$}\newline
+{\ttfamily \+\#include $<$string$>$}\newline
+{\ttfamily \+\#include "{}Queue.\+hpp"{}}\newline
+{\ttfamily \+\#include "{}Caja.\+hpp"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{main_8cpp_aa9b093e10d02d13048f1367113d5ae59}\label{main_8cpp_aa9b093e10d02d13048f1367113d5ae59} 
+std::\+string {\bfseries generar\+Nombre} ()
+\begin{DoxyCompactList}\small\item\em Genera nombre aleatorio. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+std::\+string \doxymbox{\hyperlink{main_8cpp_afb6253314781a1d08135a1e58a67e2fc}{nombres}} \+[$\,$]\+
+\item 
+std::\+string \doxymbox{\hyperlink{main_8cpp_a77f65891d471ae59f706400fc8d08622}{apellidos}} \+[$\,$]\+
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Simulación de banco con cola circular y 3 cajas. 
+
+\begin{DoxyAuthor}{Author}
+Axel Daniel Arredondo Benites 
+
+Galindo Miranda Luis 
+\end{DoxyAuthor}
+
+
+\label{doc-func-members}
+\Hypertarget{main_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Llegada aleatoria de clientes
+
+Procesamiento de cajas
+
+\label{doc-var-members}
+\Hypertarget{main_8cpp_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{main_8cpp_a77f65891d471ae59f706400fc8d08622}\index{main.cpp@{main.cpp}!apellidos@{apellidos}}
+\index{apellidos@{apellidos}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{apellidos}{apellidos}}
+{\footnotesize\ttfamily \label{main_8cpp_a77f65891d471ae59f706400fc8d08622} 
+std::\+string apellidos\+[$\,$]\+}
+
+{\bfseries Initial value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}Arce"{}},\ \textcolor{stringliteral}{"{}Jauregui"{}},\ \textcolor{stringliteral}{"{}Arredondo"{}},\ \textcolor{stringliteral}{"{}Benites"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}Mendez"{}},\ \textcolor{stringliteral}{"{}Espinoza"{}},\ \textcolor{stringliteral}{"{}Juarez"{}},\ \textcolor{stringliteral}{"{}Peru"{}}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+\Hypertarget{main_8cpp_afb6253314781a1d08135a1e58a67e2fc}\index{main.cpp@{main.cpp}!nombres@{nombres}}
+\index{nombres@{nombres}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{nombres}{nombres}}
+{\footnotesize\ttfamily \label{main_8cpp_afb6253314781a1d08135a1e58a67e2fc} 
+std::\+string nombres\+[$\,$]\+}
+
+{\bfseries Initial value:\+}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ =\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}Montserrat"{}},\ \textcolor{stringliteral}{"{}Sandra"{}},\ \textcolor{stringliteral}{"{}Axel"{}},\ \textcolor{stringliteral}{"{}Daniel"{}},}
+\DoxyCodeLine{\ \ \ \ \textcolor{stringliteral}{"{}Eliot"{}},\ \textcolor{stringliteral}{"{}Kamila"{}},\ \textcolor{stringliteral}{"{}Kevin"{}},\ \textcolor{stringliteral}{"{}Manuel"{}}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
