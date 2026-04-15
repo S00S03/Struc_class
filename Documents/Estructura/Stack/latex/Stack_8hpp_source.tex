@@ -1,0 +1,166 @@
+\doxysection{Stack.\+hpp}
+\hypertarget{Stack_8hpp_source}{}\label{Stack_8hpp_source}\doxymbox{\hyperlink{Stack_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ STACK\_HPP}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ STACK\_HPP}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <cstddef>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{classStack_aefee698059467258bbd79045aca62a63}{Stack}}}
+\DoxyCodeLine{00019\ \{\ \ \ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classStack_aefee698059467258bbd79045aca62a63}{Stack}}();}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classStack_aefee698059467258bbd79045aca62a63}{Stack}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{classStack_aefee698059467258bbd79045aca62a63}{Stack}}\ \&other);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classStack_a9e7a00875aefbdac560ab189b7bc61d1}{\string~Stack}}();}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{classStack_aefee698059467258bbd79045aca62a63}{Stack}}\&\ \doxymbox{\hyperlink{classStack_ae97cf63b6401d8af940644fa735d9412}{operator=}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{classStack_aefee698059467258bbd79045aca62a63}{Stack}}\ \&other);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classStack_a09c112ed67ca867eb98e9322ac0ee358}{push}}(\textcolor{keyword}{const}\ T\ \&new\_element);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classStack_a2723aec5c7e2611b97fcffeb7709de33}{pop}}();}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{classStack_aeecf178c7865fa4957798a0f5d7e1686}{size}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classStack_a275d43ff89b91a9c6c5636cc8539d285}{empty}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classStack_a941cc1b9263a723f8266c75cd1d3e06c}{empty\_Stack}}();}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ T\ \doxymbox{\hyperlink{classStack_a1931814ad68db1eaedabdb37fa0fe494}{top}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classStack_adf50f058313f2b2885a8ca8e2bcccf59}{print}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ full()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ redim();}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{size\_t}\ capacity;\ \ \ }
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ num\_element;\ \ \ }
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ T*\ stack;\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00104\ \};}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ \textcolor{comment}{/*\ =================\ IMPLEMENTACIÓN\ =================\ */}}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00109\ \doxymbox{\hyperlink{classStack_aefee698059467258bbd79045aca62a63}{Stack<T>::Stack}}()\ \{}
+\DoxyCodeLine{00110\ \ \ \ \ num\_element\ =\ -\/1;}
+\DoxyCodeLine{00111\ \ \ \ \ capacity\ =\ 10;}
+\DoxyCodeLine{00112\ \ \ \ \ stack\ =\ \textcolor{keyword}{new}\ T[capacity];}
+\DoxyCodeLine{00113\ \}}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00115\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00116\ \doxymbox{\hyperlink{classStack_aefee698059467258bbd79045aca62a63}{Stack<T>::Stack}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{classStack_aefee698059467258bbd79045aca62a63}{Stack}}\ \&other)\ \{}
+\DoxyCodeLine{00117\ \ \ \ \ capacity\ =\ other.capacity;}
+\DoxyCodeLine{00118\ \ \ \ \ num\_element\ =\ other.num\_element;}
+\DoxyCodeLine{00119\ \ \ \ \ stack\ =\ \textcolor{keyword}{new}\ T[capacity];}
+\DoxyCodeLine{00120\ }
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <=\ num\_element;\ i++)\ \{}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ stack[i]\ =\ other.stack[i];}
+\DoxyCodeLine{00123\ \ \ \ \ \}}
+\DoxyCodeLine{00124\ \}}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00127\ \doxymbox{\hyperlink{classStack_a9e7a00875aefbdac560ab189b7bc61d1}{Stack<T>::\string~Stack}}()\ \{}
+\DoxyCodeLine{00128\ \ \ \ \ \textcolor{keyword}{delete}[]\ stack;}
+\DoxyCodeLine{00129\ \}}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00132\ \doxymbox{\hyperlink{classStack_aefee698059467258bbd79045aca62a63}{Stack<T>}}\&\ \doxymbox{\hyperlink{classStack_ae97cf63b6401d8af940644fa735d9412}{Stack<T>::operator=}}(\textcolor{keyword}{const}\ \doxymbox{\hyperlink{classStack_aefee698059467258bbd79045aca62a63}{Stack}}\ \&other)\ \{}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{this}\ !=\ \&other)\ \{}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ stack;}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ capacity\ =\ other.capacity;}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ num\_element\ =\ other.num\_element;}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ stack\ =\ \textcolor{keyword}{new}\ T[capacity];}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <=\ num\_element;\ i++)\ \{}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ stack[i]\ =\ other.stack[i];}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00143\ \ \ \ \ \}}
+\DoxyCodeLine{00144\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{00145\ \}}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00148\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classStack_a09c112ed67ca867eb98e9322ac0ee358}{Stack<T>::push}}(\textcolor{keyword}{const}\ T\ \&new\_element)\ \{}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordflow}{if}\ (full())\ \{}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ redim();}
+\DoxyCodeLine{00151\ \ \ \ \ \}}
+\DoxyCodeLine{00152\ }
+\DoxyCodeLine{00153\ \ \ \ \ num\_element++;}
+\DoxyCodeLine{00154\ \ \ \ \ stack[num\_element]\ =\ new\_element;}
+\DoxyCodeLine{00155\ \}}
+\DoxyCodeLine{00156\ }
+\DoxyCodeLine{00157\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00158\ \textcolor{keywordtype}{void}\ Stack<T>::redim()\ \{}
+\DoxyCodeLine{00159\ \ \ \ \ capacity\ *=\ 2;}
+\DoxyCodeLine{00160\ \ \ \ \ T\ *new\_stack\ =\ \textcolor{keyword}{new}\ T[capacity];}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <=\ num\_element;\ i++)\ \{}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ new\_stack[i]\ =\ stack[i];}
+\DoxyCodeLine{00164\ \ \ \ \ \}}
+\DoxyCodeLine{00165\ }
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keyword}{delete}[]\ stack;}
+\DoxyCodeLine{00167\ \ \ \ \ stack\ =\ new\_stack;}
+\DoxyCodeLine{00168\ \}}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00170\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00171\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classStack_a2723aec5c7e2611b97fcffeb7709de33}{Stack<T>::pop}}()\ \{}
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{classStack_a275d43ff89b91a9c6c5636cc8539d285}{empty}}())\ \{}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}La\ pila\ esta\ vacia\ no\ le\ puedes\ quitar\ nada"{}};}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00175\ \ \ \ \ \}}
+\DoxyCodeLine{00176\ \ \ \ \ -\/-\/num\_element;}
+\DoxyCodeLine{00177\ \}}
+\DoxyCodeLine{00178\ }
+\DoxyCodeLine{00179\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00180\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{classStack_aeecf178c7865fa4957798a0f5d7e1686}{Stack<T>::size}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00181\ \ \ \ \ \textcolor{keywordflow}{return}\ num\_element\ +\ 1;}
+\DoxyCodeLine{00182\ \}}
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00184\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00185\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{classStack_a275d43ff89b91a9c6c5636cc8539d285}{Stack<T>::empty}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00186\ \ \ \ \ \textcolor{keywordflow}{return}\ num\_element\ ==\ -\/1;}
+\DoxyCodeLine{00187\ \}}
+\DoxyCodeLine{00188\ }
+\DoxyCodeLine{00189\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00190\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classStack_a941cc1b9263a723f8266c75cd1d3e06c}{Stack<T>::empty\_Stack}}()\ \{}
+\DoxyCodeLine{00191\ \ \ \ \ num\_element\ =\ -\/1;}
+\DoxyCodeLine{00192\ \}}
+\DoxyCodeLine{00193\ }
+\DoxyCodeLine{00194\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00195\ T\ \doxymbox{\hyperlink{classStack_a1931814ad68db1eaedabdb37fa0fe494}{Stack<T>::top}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00196\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{classStack_a275d43ff89b91a9c6c5636cc8539d285}{empty}}())\ \{}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::out\_of\_range(\textcolor{stringliteral}{"{}Stack\ vacia"{}});}
+\DoxyCodeLine{00198\ \ \ \ \ \}}
+\DoxyCodeLine{00199\ \ \ \ \ \textcolor{keywordflow}{return}\ stack[num\_element];}
+\DoxyCodeLine{00200\ \}}
+\DoxyCodeLine{00201\ }
+\DoxyCodeLine{00202\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00203\ \textcolor{keywordtype}{bool}\ Stack<T>::full()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00204\ \ \ \ \ \textcolor{keywordflow}{return}\ num\_element\ ==\ capacity\ -\/\ 1;}
+\DoxyCodeLine{00205\ \}}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00207\ \textcolor{keyword}{template}\ <\textcolor{keyword}{typename}\ T>}
+\DoxyCodeLine{00208\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{classStack_adf50f058313f2b2885a8ca8e2bcccf59}{Stack<T>::print}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{00209\ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{classStack_a275d43ff89b91a9c6c5636cc8539d285}{empty}}())\ \{}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Pila\ vacia\ que\ vas\ a\ imprimir\(\backslash\)n"{}};}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00212\ \ \ \ \ \}}
+\DoxyCodeLine{00213\ }
+\DoxyCodeLine{00214\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Elements\ for\ stack:\ "{}};}
+\DoxyCodeLine{00215\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ num\_element;\ i\ >=\ 0;\ -\/-\/i)\ \{}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ ["{}}\ <<\ i\ <<\ \textcolor{stringliteral}{"{}]\ =\ "{}}\ <<\ stack[i];}
+\DoxyCodeLine{00217\ \ \ \ \ \}}
+\DoxyCodeLine{00218\ \ \ \ \ std::cout\ <<\ std::endl;}
+\DoxyCodeLine{00219\ \}}
+\DoxyCodeLine{00220\ }
+\DoxyCodeLine{00221\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

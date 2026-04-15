@@ -1,0 +1,19 @@
+var NAVTREEINDEX0 =
+{
+"Caja_8hpp_source.html":[1,0,0],
+"Client_8hpp_source.html":[1,0,1],
+"Queue_8hpp_source.html":[1,0,3],
+"annotated.html":[0,0],
+"classCaja.html":[0,0,0],
+"classClient.html":[0,0,1],
+"classQueue.html":[0,0,2],
+"classes.html":[0,1],
+"files.html":[1,0],
+"globals.html":[1,1,0],
+"globals_func.html":[1,1,1],
+"index.html":[],
+"main_8cpp.html":[1,0,2],
+"main_8cpp.html#aa9b093e10d02d13048f1367113d5ae59":[1,0,2,0],
+"main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[1,0,2,1],
+"pages.html":[]
+};

@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1771018624 source:c:\users\erik0\onedrive\documentos\estructura de datos\codeblocks\pilla\pilacompiladorfijo\main.cpp
+	<iostream>
+	"Pila.hpp"
+
+1771018677 c:\users\erik0\onedrive\documentos\estructura de datos\codeblocks\pilla\pilacompiladorfijo\pila.hpp
+	<exception>
+
+1771018657 source:c:\users\erik0\onedrive\documentos\estructura de datos\codeblocks\pilla\pilacompiladorfijo\pila.cpp
+	"Pila.hpp"
+	<iostream>
+

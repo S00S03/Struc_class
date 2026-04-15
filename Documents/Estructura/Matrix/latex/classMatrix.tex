@@ -1,0 +1,331 @@
+\doxysection{Matrix Class Reference}
+\hypertarget{classMatrix}{}\label{classMatrix}\index{Matrix@{Matrix}}
+
+
+Clase para el manejo de matrices dinámicas de números reales.  
+
+
+
+
+{\ttfamily \+\#include $<$Matrix.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{classMatrix_ab5bd8e78ac01c646111ea05c21a9090e}{Matrix}} (const unsigned int \&Row, const unsigned int \&Column)
+\begin{DoxyCompactList}\small\item\em Constructor que inicializa una matriz con filas y columnas. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classMatrix_a3d1bb3854368da08f2d0acf322827239}{Matrix}} (const \doxymbox{\hyperlink{classMatrix}{Matrix}} \&Other)
+\begin{DoxyCompactList}\small\item\em Constructor de copia. \end{DoxyCompactList}\item 
+\Hypertarget{classMatrix_a9b1c3627f573d78a2f08623fdfef990f}\label{classMatrix_a9b1c3627f573d78a2f08623fdfef990f} 
+{\bfseries \texorpdfstring{$\sim$}{\string~}\+Matrix} ()
+\begin{DoxyCompactList}\small\item\em Destructor de la clase \doxylink{classMatrix}{Matrix}. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classMatrix}{Matrix}} \& \doxymbox{\hyperlink{classMatrix_a2d82f3364991c628d9efd63fd8d03d78}{operator=}} (const \doxymbox{\hyperlink{classMatrix}{Matrix}} \&Other)
+\begin{DoxyCompactList}\small\item\em Sobrecarga del operador de asignación. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classMatrix}{Matrix}} \doxymbox{\hyperlink{classMatrix_a010fd27dd4042e06201f7a4b8acdeaa1}{operator+}} (const \doxymbox{\hyperlink{classMatrix}{Matrix}} \&Other) const
+\begin{DoxyCompactList}\small\item\em Suma de matrices. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classMatrix}{Matrix}} \doxymbox{\hyperlink{classMatrix_a4658cad8d9bbdd2b980f994a4d81eeae}{operator-\/}} (const \doxymbox{\hyperlink{classMatrix}{Matrix}} \&Other) const
+\begin{DoxyCompactList}\small\item\em Resta de matrices. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classMatrix}{Matrix}} \doxymbox{\hyperlink{classMatrix_a96ced5a24562554f4e65d5ec05644e63}{operator\texorpdfstring{$\ast$}{*}}} (const \doxymbox{\hyperlink{classMatrix}{Matrix}} \&Other) const
+\begin{DoxyCompactList}\small\item\em Multiplicación de matrices. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classMatrix}{Matrix}} \doxymbox{\hyperlink{classMatrix_a6da1833a073888d302d17785fee5d943}{operator\texorpdfstring{$\ast$}{*}}} (const double \&Scalar) const
+\begin{DoxyCompactList}\small\item\em Multiplicación escalar. \end{DoxyCompactList}\item 
+double \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{classMatrix_a2a34ac25832c3fffa58b2aa0f310b9ba}{operator\+[$\,$]\+}} (int i) const
+\begin{DoxyCompactList}\small\item\em Acceso a una fila de la matriz. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{classMatrix_a6dd887c6ee88a15bf4efd28cc7c8a048}{Redim}} (const unsigned int \&new\+\_\+\+Rows, const unsigned int \&new\+\_\+\+Colums)
+\begin{DoxyCompactList}\small\item\em Redimensiona la matriz a un tamaño mayor. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classMatrix}{Matrix}} \doxymbox{\hyperlink{classMatrix_a625b58fcc846ea0a6f72b609ed317fec}{Trans}} ()
+\begin{DoxyCompactList}\small\item\em Calcula la transpuesta de la matriz. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{classMatrix}{Matrix}} \doxymbox{\hyperlink{classMatrix_afb743b12bb57635357bce8ed1c7d9236}{Inversa}} ()
+\begin{DoxyCompactList}\small\item\em Calcula la inversa de la matriz. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std::\+ostream \& \doxymbox{\hyperlink{classMatrix_a857cf01d39987ee8070464ff881c5eb2}{operator$<$$<$}} (std::\+ostream \&output, \doxymbox{\hyperlink{classMatrix}{Matrix}} \&m)
+\begin{DoxyCompactList}\small\item\em Sobrecarga del operador \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} para imprimir la matriz. \end{DoxyCompactList}\item 
+std::\+istream \& \doxymbox{\hyperlink{classMatrix_a6c37ceb3773d78e8a6dae27caa8934c4}{operator$>$$>$}} (std::\+istream \&input, \doxymbox{\hyperlink{classMatrix}{Matrix}} \&m)
+\begin{DoxyCompactList}\small\item\em Sobrecarga del operador \texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>} para ingresar los valores de la matriz. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase para el manejo de matrices dinámicas de números reales. 
+
+Esta clase permite crear matrices de tamaño dinámico y realizar operaciones básicas como suma, resta, multiplicación, transpuesta e inversa. La memoria es gestionada manualmente mediante punteros.
+
+\begin{DoxyAuthor}{Author}
+Arredondo Benites Axel Daniel 
+
+Luis Enrrique Galindo Miranda 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+9 de febrero 
+\end{DoxyDate}
+
+
+\label{doc-constructors}
+\Hypertarget{classMatrix_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classMatrix_ab5bd8e78ac01c646111ea05c21a9090e}\index{Matrix@{Matrix}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!Matrix@{Matrix}}
+\doxysubsubsection{\texorpdfstring{Matrix()}{Matrix()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classMatrix_ab5bd8e78ac01c646111ea05c21a9090e} 
+Matrix::\+\+Matrix (\begin{DoxyParamCaption}\item[{const unsigned int \&}]{Row}{, }\item[{const unsigned int \&}]{Column}{}\end{DoxyParamCaption})}
+
+
+
+Constructor que inicializa una matriz con filas y columnas. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Row} & Número de filas \\
+\hline
+{\em Column} & Número de columnas \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classMatrix_a3d1bb3854368da08f2d0acf322827239}\index{Matrix@{Matrix}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!Matrix@{Matrix}}
+\doxysubsubsection{\texorpdfstring{Matrix()}{Matrix()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classMatrix_a3d1bb3854368da08f2d0acf322827239} 
+Matrix::\+\+Matrix (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{classMatrix}{Matrix}} \&}]{Other}{}\end{DoxyParamCaption})}
+
+
+
+Constructor de copia. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Other} & Matriz a copiar \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{classMatrix_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classMatrix_afb743b12bb57635357bce8ed1c7d9236}\index{Matrix@{Matrix}!Inversa@{Inversa}}
+\index{Inversa@{Inversa}!Matrix@{Matrix}}
+\doxysubsubsection{\texorpdfstring{Inversa()}{Inversa()}}
+{\footnotesize\ttfamily \label{classMatrix_afb743b12bb57635357bce8ed1c7d9236} 
+\doxymbox{\hyperlink{classMatrix}{Matrix}} Matrix::\+\+Inversa (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Calcula la inversa de la matriz. 
+
+Calcula la inversa de la matriz usando Gauss-\/\+Jordan.
+
+\begin{DoxyReturn}{Returns}
+Matriz inversa 
+\end{DoxyReturn}
+\Hypertarget{classMatrix_a6da1833a073888d302d17785fee5d943}\index{Matrix@{Matrix}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!Matrix@{Matrix}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classMatrix_a6da1833a073888d302d17785fee5d943} 
+\doxymbox{\hyperlink{classMatrix}{Matrix}} Matrix::\+operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}\item[{const double \&}]{Scalar}{}\end{DoxyParamCaption}) const}
+
+
+
+Multiplicación escalar. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Scalar} & Escalar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Matriz resultante 
+\end{DoxyReturn}
+\Hypertarget{classMatrix_a96ced5a24562554f4e65d5ec05644e63}\index{Matrix@{Matrix}!operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}}
+\index{operator\texorpdfstring{$\ast$}{*}@{operator\texorpdfstring{$\ast$}{*}}!Matrix@{Matrix}}
+\doxysubsubsection{\texorpdfstring{operator\texorpdfstring{$\ast$}{*}()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classMatrix_a96ced5a24562554f4e65d5ec05644e63} 
+\doxymbox{\hyperlink{classMatrix}{Matrix}} Matrix::\+operator\texorpdfstring{$\ast$}{*} (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{classMatrix}{Matrix}} \&}]{Other}{}\end{DoxyParamCaption}) const}
+
+
+
+Multiplicación de matrices. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Other} & Matriz multiplicadora \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Matriz resultante
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em Other} & Matriz multiplicadora \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Resultado de la multiplicación 
+\end{DoxyReturn}
+\Hypertarget{classMatrix_a010fd27dd4042e06201f7a4b8acdeaa1}\index{Matrix@{Matrix}!operator+@{operator+}}
+\index{operator+@{operator+}!Matrix@{Matrix}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \label{classMatrix_a010fd27dd4042e06201f7a4b8acdeaa1} 
+\doxymbox{\hyperlink{classMatrix}{Matrix}} Matrix::\+operator+ (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{classMatrix}{Matrix}} \&}]{Other}{}\end{DoxyParamCaption}) const}
+
+
+
+Suma de matrices. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Other} & Matriz a sumar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Matriz resultante
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em Other} & Matriz a sumar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Resultado de la suma 
+\end{DoxyReturn}
+\Hypertarget{classMatrix_a4658cad8d9bbdd2b980f994a4d81eeae}\index{Matrix@{Matrix}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Matrix@{Matrix}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily \label{classMatrix_a4658cad8d9bbdd2b980f994a4d81eeae} 
+\doxymbox{\hyperlink{classMatrix}{Matrix}} Matrix::\+operator-\/ (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{classMatrix}{Matrix}} \&}]{Other}{}\end{DoxyParamCaption}) const}
+
+
+
+Resta de matrices. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Other} & Matriz a restar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Matriz resultante
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em Other} & Matriz a restar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Resultado de la resta 
+\end{DoxyReturn}
+\Hypertarget{classMatrix_a2d82f3364991c628d9efd63fd8d03d78}\index{Matrix@{Matrix}!operator=@{operator=}}
+\index{operator=@{operator=}!Matrix@{Matrix}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \label{classMatrix_a2d82f3364991c628d9efd63fd8d03d78} 
+\doxymbox{\hyperlink{classMatrix}{Matrix}} \& Matrix::\+operator= (\begin{DoxyParamCaption}\item[{const \doxymbox{\hyperlink{classMatrix}{Matrix}} \&}]{Other}{}\end{DoxyParamCaption})}
+
+
+
+Sobrecarga del operador de asignación. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Other} & Matriz a asignar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Referencia al objeto actual 
+\end{DoxyReturn}
+\Hypertarget{classMatrix_a2a34ac25832c3fffa58b2aa0f310b9ba}\index{Matrix@{Matrix}!operator\+[]\+@{operator[]}}
+\index{operator\+[]\+@{operator[]}!Matrix@{Matrix}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily \label{classMatrix_a2a34ac25832c3fffa58b2aa0f310b9ba} 
+double \texorpdfstring{$\ast$}{*} Matrix::\+operator\+[$\,$]\+ (\begin{DoxyParamCaption}\item[{int}]{i}{}\end{DoxyParamCaption}) const}
+
+
+
+Acceso a una fila de la matriz. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & Índice de la fila \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Puntero a la fila 
+\end{DoxyReturn}
+\Hypertarget{classMatrix_a6dd887c6ee88a15bf4efd28cc7c8a048}\index{Matrix@{Matrix}!Redim@{Redim}}
+\index{Redim@{Redim}!Matrix@{Matrix}}
+\doxysubsubsection{\texorpdfstring{Redim()}{Redim()}}
+{\footnotesize\ttfamily \label{classMatrix_a6dd887c6ee88a15bf4efd28cc7c8a048} 
+void Matrix::\+\+Redim (\begin{DoxyParamCaption}\item[{const unsigned int \&}]{new\+\_\+\+Rows}{, }\item[{const unsigned int \&}]{new\+\_\+\+Colums}{}\end{DoxyParamCaption})}
+
+
+
+Redimensiona la matriz a un tamaño mayor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em new\+\_\+\+Rows} & Nuevas filas \\
+\hline
+{\em new\+\_\+\+Colums} & Nuevas columnas \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classMatrix_a625b58fcc846ea0a6f72b609ed317fec}\index{Matrix@{Matrix}!Trans@{Trans}}
+\index{Trans@{Trans}!Matrix@{Matrix}}
+\doxysubsubsection{\texorpdfstring{Trans()}{Trans()}}
+{\footnotesize\ttfamily \label{classMatrix_a625b58fcc846ea0a6f72b609ed317fec} 
+\doxymbox{\hyperlink{classMatrix}{Matrix}} Matrix::\+\+Trans (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Calcula la transpuesta de la matriz. 
+
+\begin{DoxyReturn}{Returns}
+Matriz transpuesta 
+\end{DoxyReturn}
+
+
+\label{doc-related-members}
+\Hypertarget{classMatrix_doc-related-members}
+\doxysubsection{Friends And Related Symbol Documentation}
+\Hypertarget{classMatrix_a857cf01d39987ee8070464ff881c5eb2}\index{Matrix@{Matrix}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Matrix@{Matrix}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily \label{classMatrix_a857cf01d39987ee8070464ff881c5eb2} 
+std::\+ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std::\+ostream \&}]{output}{, }\item[{\doxymbox{\hyperlink{classMatrix}{Matrix}} \&}]{m}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Sobrecarga del operador \texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<} para imprimir la matriz. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em output} & Flujo de salida \\
+\hline
+{\em m} & Matriz a imprimir \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Referencia al flujo de salida 
+\end{DoxyReturn}
+\Hypertarget{classMatrix_a6c37ceb3773d78e8a6dae27caa8934c4}\index{Matrix@{Matrix}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Matrix@{Matrix}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$}{operator>>}}
+{\footnotesize\ttfamily \label{classMatrix_a6c37ceb3773d78e8a6dae27caa8934c4} 
+std::\+istream \& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std::\+istream \&}]{input}{, }\item[{\doxymbox{\hyperlink{classMatrix}{Matrix}} \&}]{m}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Sobrecarga del operador \texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>} para ingresar los valores de la matriz. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & Flujo de entrada \\
+\hline
+{\em m} & Matriz a llenar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Referencia al flujo de entrada 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+Matrix.\+hpp\item 
+\doxymbox{\hyperlink{Matrix_8cpp}{Matrix.\+cpp}}\end{DoxyCompactItemize}
